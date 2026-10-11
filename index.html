@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jungho Lee</title>
+<meta name="description" content="Jungho Lee, Associate Professor, School of Economics, Yonsei University. Labor economics, entrepreneurship, industrial organization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf7; --text:#1f2328; --muted:#5f6670; --line:#e4e1da;
+    --accent:#1f3d7a; --accent-soft:#e9eef8; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14161a; --text:#e6e6e3; --muted:#9aa1ab; --line:#2b2f36;
+      --accent:#8fb0f0; --accent-soft:#1d2738; --card:#1a1d22;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+
+  header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .top-inner{max-width:880px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:19px;color:var(--text)}
+  nav a{color:var(--muted);font-size:14px;font-weight:500;margin-left:22px}
+  nav a:hover{color:var(--accent);text-decoration:none}
+
+  main{max-width:880px;margin:0 auto;padding:0 24px 80px}
+
+  .hero{display:grid;grid-template-columns:180px 1fr;gap:40px;align-items:center;padding:64px 0 48px;border-bottom:1px solid var(--line)}
+  .photo{width:180px;height:220px;border-radius:6px;background:var(--accent-soft);overflow:hidden;
+    display:flex;align-items:center;justify-content:center;font-family:"Source Serif 4",serif;font-size:48px;color:var(--accent)}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  h1{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:40px;line-height:1.15;margin:0 0 6px;letter-spacing:-.01em}
+  .role{font-size:17px;color:var(--muted);margin:0 0 20px}
+  .role strong{color:var(--text);font-weight:500}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+  .tags li{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:500}
+  .links{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;padding:8px 14px;border:1px solid var(--line);
+    border-radius:6px;color:var(--text);background:var(--card)}
+  .btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+  .btn.primary:hover{color:var(--bg);opacity:.9}
+
+  section{padding:48px 0 8px;scroll-margin-top:64px}
+  h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:26px;margin:0 0 6px}
+  h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:32px 0 4px}
+
+  ol.pubs{list-style:none;margin:0;padding:0}
+  .pubs li{padding:16px 0;border-bottom:1px solid var(--line)}
+  .pubs li:last-child{border-bottom:0}
+  .pt{font-family:"Source Serif 4",Georgia,serif;font-size:18.5px;line-height:1.4;font-weight:600}
+  .pt a{color:var(--text)}
+  .pt a:hover{color:var(--accent)}
+  .co{color:var(--muted);font-size:14.5px;margin-top:2px}
+  .ve{font-size:14.5px;margin-top:2px}
+  .ve em{font-family:"Source Serif 4",Georgia,serif;font-size:15.5px}
+  .badge{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.03em;padding:2px 8px;border-radius:4px;
+    background:var(--accent-soft);color:var(--accent);margin-left:6px;vertical-align:2px}
+  .extra{font-size:13.5px;margin-top:4px}
+
+  .contact{display:grid;grid-template-columns:120px 1fr;gap:10px 20px;margin-top:16px;font-size:15px}
+  .contact dt{color:var(--muted)}
+  .contact dd{margin:0}
+
+  footer{max-width:880px;margin:0 auto;padding:24px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+
+  @media (max-width:640px){
+    .top-inner{padding:12px 16px}
+    nav a{margin-left:14px;font-size:13px}
+    main{padding:0 16px 60px}
+    .hero{grid-template-columns:1fr;gap:24px;padding:40px 0 36px}
+    .photo{width:120px;height:146px;font-size:34px}
+    h1{font-size:32px}
+    .contact{grid-template-columns:1fr;gap:2px}
+    .contact dd{margin-bottom:12px}
+    footer{padding:24px 16px}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="#">Jungho Lee</a>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="photo">
+      <!-- 프로필 사진: files/photo.jpg 로 넣으면 자동으로 표시됩니다 -->
+      <img src="files/photo.jpg" alt="Jungho Lee" onerror="this.parentNode.textContent='JL'">
+    </div>
+    <div>
+      <h1>Jungho Lee</h1>
+      <p class="role"><strong>Associate Professor</strong>, School of Economics, Yonsei University</p>
+      <ul class="tags">
+        <li>Labor Economics</li>
+        <li>Entrepreneurship</li>
+        <li>Industrial Organization</li>
+      </ul>
+      <div class="links">
+        <a class="btn primary" href="files/cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        <a class="btn" href="mailto:jungholee@yonsei.ac.kr">jungholee@yonsei.ac.kr</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <h3>Publications</h3>
+    <ol class="pubs">
+      <li>
+        <div class="pt"><a href="https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2023.00254" target="_blank" rel="noopener">Start-Up Firms and Corporate Culture: Evidence from Advertised Corporate Culture</a></div>
+        <div class="ve"><em>Management Science</em><span class="badge">Forthcoming</span></div>
+      </li>
+      <li>
+        <div class="pt"><a href="https://www.journals.uchicago.edu/doi/10.1086/732471" target="_blank" rel="noopener">Financial Crisis and Female Entrepreneurship: Evidence from South Korea</a></div>
+        <div class="co">with Sunha Myong</div>
+        <div class="ve"><em>Journal of Political Economy Macroeconomics</em>, 2024, 2(4): 602–650</div>
+      </li>
+      <li>
+        <div class="pt"><a href="https://www.sciencedirect.com/science/article/pii/S0261560624000779" target="_blank" rel="noopener">Trade Imbalance, Heavy Goods, and Pollution</a></div>
+        <div class="co">with Shang-Jin Wei and Jianhuan Xu</div>
+        <div class="ve"><em>Journal of International Money and Finance</em>, 2024, Vol. 144</div>
+      </li>
+      <li>
+        <div class="pt"><a href="https://onlinelibrary.wiley.com/doi/10.1111/1756-2171.12324" target="_blank" rel="noopener">Estimating the Benefits and Costs of Forming Business Partnerships</a></div>
+        <div class="ve"><em>RAND Journal of Economics</em>, 2020, 51(2): 531–562</div>
+        <div class="extra"><a href="files/partner-oa.pdf" target="_blank" rel="noopener">Online Appendix</a></div>
+      </li>
+      <li>
+        <div class="pt"><a href="https://www.sciencedirect.com/science/article/pii/S0166046218300917" target="_blank" rel="noopener">Why Do Businesses Grow Faster in Urban Areas than in Rural Areas?</a></div>
+        <div class="co">with Jianhuan Xu</div>
+        <div class="ve"><em>Regional Science and Urban Economics</em>, 2020, Vol. 81</div>
+      </li>
+      <li>
+        <div class="pt"><a href="https://www.sciencedirect.com/science/article/pii/S0165188919300612" target="_blank" rel="noopener">Tax Uncertainty and Business Activity</a></div>
+        <div class="co">with Jianhuan Xu</div>
+        <div class="ve"><em>Journal of Economic Dynamics and Control</em>, 2019, Vol. 103: 158–184</div>
+      </li>
+    </ol>
+
+    <h3>Book Chapters</h3>
+    <ol class="pubs">
+      <li>
+        <div class="pt"><a href="https://books.google.co.kr/books?id=DZQ7EAAAQBAJ" target="_blank" rel="noopener">Entrepreneurship in Singapore</a></div>
+        <div class="ve">In <em>The Singapore Economy: Dynamism and Inclusion</em>, ed. Hian Teck Hoon, Routledge, 2022</div>
+      </li>
+    </ol>
+
+    <h3>Working Papers</h3>
+    <ol class="pubs">
+      <li>
+        <div class="pt"><a href="files/worknorm_2026jan.pdf" target="_blank" rel="noopener">Workplace Norms and Fertility</a></div>
+        <div class="co">with Sunha Myong</div>
+      </li>
+      <li>
+        <div class="pt"><a href="https://ink.library.smu.edu.sg/soe_research/2421/" target="_blank" rel="noopener">Customer Capital and Trade Intermediaries: Evidence from China</a></div>
+        <div class="co">with Jianhuan Xu</div>
+        <div class="ve">Revision requested, <em>Macroeconomic Dynamics</em></div>
+      </li>
+      <li>
+        <div class="pt"><a href="files/paper.pdf" target="_blank" rel="noopener">Self-financing, Parental Transfer, and College Education</a></div>
+        <div class="co">with Sunha Myong</div>
+      </li>
+      <li>
+        <div class="pt"><a href="https://ink.library.smu.edu.sg/soe_research/2058/" target="_blank" rel="noopener">When Does Limited Commitment Matter in a Production Economy?</a></div>
+        <div class="co">with Kyoung Jin Choi</div>
+      </li>
+      <li>
+        <div class="pt"><a href="https://ink.library.smu.edu.sg/soe_research/2104/" target="_blank" rel="noopener">On the Relationship between Household Wealth and Entrepreneurship</a></div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <p>Full curriculum vitae: <a href="files/cv.pdf" target="_blank" rel="noopener">download PDF</a>.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <dl class="contact">
+      <dt>Email</dt><dd><a href="mailto:jungholee@yonsei.ac.kr">jungholee@yonsei.ac.kr</a></dd>
+      <dt>Affiliation</dt><dd>School of Economics, Yonsei University<br>50 Yonsei-ro, Seodaemun-gu, Seoul 03722, Korea</dd>
+    </dl>
+  </section>
+</main>
+
+<footer>© 2026 Jungho Lee</footer>
+
+</body>
+</html>
