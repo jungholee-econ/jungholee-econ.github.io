@@ -69,6 +69,10 @@
     background:var(--accent-soft);color:var(--accent);margin-left:6px;vertical-align:2px}
   .extra{font-size:13.5px;margin-top:4px}
 
+  ul.teach{list-style:none;margin:0;padding:0}
+  .teach li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .teach li:last-child{border-bottom:0}
+  .teach .yr{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
   .contact{display:grid;grid-template-columns:120px 1fr;gap:10px 20px;margin-top:16px;font-size:15px}
   .contact dt{color:var(--muted)}
   .contact dd{margin:0}
@@ -95,6 +99,7 @@
     <a class="brand" href="#">Jungho Lee</a>
     <nav>
       <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -128,8 +133,13 @@
     <h3>Publications</h3>
     <ol class="pubs">
       <li>
+        <div class="pt">Customer Capital and Aggregate Welfare</div>
+        <div class="co">with Jianhuan Xu</div>
+        <div class="ve"><em>Macroeconomic Dynamics</em><span class="badge">Accepted</span></div>
+      </li>
+      <li>
         <div class="pt"><a href="https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2023.00254" target="_blank" rel="noopener">Start-Up Firms and Corporate Culture: Evidence from Advertised Corporate Culture</a></div>
-        <div class="ve"><em>Management Science</em><span class="badge">Forthcoming</span></div>
+        <div class="ve"><em>Management Science</em>, 2026, 72(10)</div>
       </li>
       <li>
         <div class="pt"><a href="https://www.journals.uchicago.edu/doi/10.1086/732471" target="_blank" rel="noopener">Financial Crisis and Female Entrepreneurship: Evidence from South Korea</a></div>
@@ -144,7 +154,6 @@
       <li>
         <div class="pt"><a href="https://onlinelibrary.wiley.com/doi/10.1111/1756-2171.12324" target="_blank" rel="noopener">Estimating the Benefits and Costs of Forming Business Partnerships</a></div>
         <div class="ve"><em>RAND Journal of Economics</em>, 2020, 51(2): 531–562</div>
-        <div class="extra"><a href="files/partner-oa.pdf" target="_blank" rel="noopener">Online Appendix</a></div>
       </li>
       <li>
         <div class="pt"><a href="https://www.sciencedirect.com/science/article/pii/S0166046218300917" target="_blank" rel="noopener">Why Do Businesses Grow Faster in Urban Areas than in Rural Areas?</a></div>
@@ -162,38 +171,50 @@
     <ol class="pubs">
       <li>
         <div class="pt"><a href="https://books.google.co.kr/books?id=DZQ7EAAAQBAJ" target="_blank" rel="noopener">Entrepreneurship in Singapore</a></div>
-        <div class="ve">In <em>The Singapore Economy: Dynamism and Inclusion</em>, ed. Hian Teck Hoon, Routledge, 2022</div>
+        <div class="ve">In <em>The Singapore Economy: Dynamism and Inclusion</em>, ed. Hian Teck Hoon, Routledge, 2021</div>
       </li>
     </ol>
 
     <h3>Working Papers</h3>
     <ol class="pubs">
       <li>
+        <div class="pt"><a href="files/self-financing.pdf" target="_blank" rel="noopener">Self-financing, Parental Transfer, and College Education</a></div>
+        <div class="co">with Sunha Myong</div>
+        <div class="ve">Revision requested, <em>Macroeconomic Dynamics</em></div>
+      </li>
+      <li>
         <div class="pt"><a href="files/worknorm_2026jan.pdf" target="_blank" rel="noopener">Workplace Norms and Fertility</a></div>
         <div class="co">with Sunha Myong</div>
       </li>
       <li>
-        <div class="pt"><a href="https://ink.library.smu.edu.sg/soe_research/2421/" target="_blank" rel="noopener">Customer Capital and Trade Intermediaries: Evidence from China</a></div>
-        <div class="co">with Jianhuan Xu</div>
-        <div class="ve">Revision requested, <em>Macroeconomic Dynamics</em></div>
-      </li>
-      <li>
-        <div class="pt"><a href="files/paper.pdf" target="_blank" rel="noopener">Self-financing, Parental Transfer, and College Education</a></div>
-        <div class="co">with Sunha Myong</div>
-      </li>
-      <li>
-        <div class="pt"><a href="https://ink.library.smu.edu.sg/soe_research/2058/" target="_blank" rel="noopener">When Does Limited Commitment Matter in a Production Economy?</a></div>
+        <div class="pt"><a href="files/limited-commitment.pdf" target="_blank" rel="noopener">When Does Limited Commitment Matter in a Production Economy?</a></div>
         <div class="co">with Kyoung Jin Choi</div>
       </li>
       <li>
-        <div class="pt"><a href="https://ink.library.smu.edu.sg/soe_research/2104/" target="_blank" rel="noopener">On the Relationship between Household Wealth and Entrepreneurship</a></div>
+        <div class="pt"><a href="files/household-wealth.pdf" target="_blank" rel="noopener">On the Relationship between Household Wealth and Entrepreneurship</a></div>
       </li>
     </ol>
   </section>
 
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <h3>Yonsei University</h3>
+    <ul class="teach">
+      <li><span>Labor Economics (Master)</span><span class="yr">2025–present</span></li>
+      <li><span>Personnel Economics (Undergraduate)</span><span class="yr">2024–present</span></li>
+      <li><span>Microeconomics (Undergraduate)</span><span class="yr">2024–present</span></li>
+    </ul>
+    <h3>Singapore Management University</h3>
+    <ul class="teach">
+      <li><span>Labor Economics (Ph.D.)</span><span class="yr">2016–2024</span></li>
+      <li><span>Labor Economics (Master)</span><span class="yr">2019–2021</span></li>
+      <li><span>Labor Economics (Undergraduate)</span><span class="yr">2015–2024</span></li>
+    </ul>
+  </section>
+
   <section id="cv">
     <h2>CV</h2>
-    <p>Full curriculum vitae: <a href="files/cv.pdf" target="_blank" rel="noopener">download PDF</a>.</p>
+    <p>Full curriculum vitae (October 2026): <a href="files/cv.pdf" target="_blank" rel="noopener">download PDF</a>.</p>
   </section>
 
   <section id="contact">
