@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+  // Owner opt-out: visit /?me once per browser to stop counting your own visits; /?me=off to undo.
+  (function(){
+    var KEY='ga-optout', on=false;
+    try {
+      var q=new URLSearchParams(location.search);
+      if (q.has('me')) {
+        if (q.get('me')==='off') localStorage.removeItem(KEY); else localStorage.setItem(KEY,'1');
+        history.replaceState(null,'',location.pathname+location.hash);
+      }
+      on = localStorage.getItem(KEY)==='1';
+    } catch(e) {}
+    if (on) { window['ga-disable-G-1WRRYWBB1T']=true; window.__gaOptOut=true; }
+  })();
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WRRYWBB1T"></script>
 <script>
@@ -163,7 +178,8 @@
 
 </main>
 
-<footer>© 2026 Jungho Lee</footer>
+<footer>© 2026 Jungho Lee<span id="optout-note" hidden> · Your visits from this browser are not counted.</span></footer>
+<script>if(window.__gaOptOut){document.getElementById('optout-note').hidden=false;}</script>
 
 
 </body>
